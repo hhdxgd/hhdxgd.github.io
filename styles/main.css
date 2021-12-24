@@ -2171,7 +2171,7 @@ body {
     .mist .site-title i {
       background: #63e6befe;
     }.box-scale > #landlord {
-      transform: scale(1);
+      transform: scale(0.9);
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
