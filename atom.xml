@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hhdxgd.github.io</id>
     <title>hhdxgd&apos;s blog</title>
-    <updated>2021-12-24T12:23:44.192Z</updated>
+    <updated>2021-12-25T15:09:18.185Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hhdxgd.github.io"/>
     <link rel="self" href="https://hhdxgd.github.io/atom.xml"/>
@@ -10,4 +10,86 @@
     <logo>https://hhdxgd.github.io/images/avatar.png</logo>
     <icon>https://hhdxgd.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, hhdxgd&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[P2958木瓜林_题解]]></title>
+        <id>https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/</id>
+        <link href="https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/">
+        </link>
+        <updated>2021-12-25T13:04:11.000Z</updated>
+        <content type="html"><![CDATA[<p>音乐食用更佳：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1475596788&auto=1&height=66"></iframe>
+<p>-<a href="http://47.107.237.15/problem/2743">有翻译的题目-木瓜林</a></p>
+<p>定位题目：</p>
+<ol>
+<li>深搜，暴力</li>
+<li>题很简单，翻译不到位</li>
+</ol>
+<p>//走一波翻译（只给出了题面的翻译，输入输出没有,希望管理员大大补上）</p>
+<ul>
+<li>
+<p>输入</p>
+</li>
+<li>
+<p>输入数据的第 1 行:两个空格隔开的整数 R 和 C。</p>
+</li>
+<li>
+<p>第 2 行到第 R+1 行:第 i+1行有 C 个空格隔开的整数，表示第 i 行的每个格的水果数。</p>
+</li>
+<li>
+<p>输出</p>
+</li>
+<li>
+<p>只有一行，一个单独的整数，表示到贝茜吃完右下角(R,C)的木瓜回到牛棚的时候为止，一共在木瓜林吃掉了多少个木瓜。</p>
+<p>中心思路：在每一次搜索的寻找中都找出最大的f [x] [y]<br>
+然后将X、Y带入下一次的搜索</p>
+<p>贴上代码</p>
+</li>
+</ul>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int total;  
+int r , c; 
+int f [55] [55];  //木瓜林地图
+bool fju [55] [55];  //判断是否走过地图 
+int xplace [4] = {0,1,-1,0};  //X坐标的上下左右
+int yplace [4] = {1,0,0,-1};  //Y坐标的上下左右
+void dfs(int x,int y) {
+	if(x == r &amp;&amp; y == c) {
+		return;  
+	}
+	int maxi = -1;  //初始化为最小 
+	for(int i = 0 ; i &lt; 4 ; i++) {
+		int nowx = x + xplace [i];
+		int nowy = y + yplace [i];  //枚举出X、Y上下左右可能的坐标
+		if(nowx &gt;= 1 &amp;&amp; nowx &lt;= r &amp;&amp; nowy &gt;= 1 &amp;&amp; nowy &lt;=c &amp;&amp; ! fju [nowx] [nowy])
+		maxi = max ( maxi , f[nowx][nowy] );  //找出最大值 
+	}
+	total += maxi; 
+	for(int i = 0 ; i &lt; 4 ; i++) {
+		int nowx = x + xplace [i];  
+		int nowy = y + yplace [i];  
+		if( maxi == f [nowx] [nowy] ) { 
+			fju [nowx] [nowy] = 1 ; 
+			f [nowx] [nowy] = 0 ;  //更新地图 
+			dfs ( nowx , nowy );  //递归
+			break;
+		}
+	}  //暴力，再搜一遍 (任性中......) 
+	return ;
+} 
+int main() {
+	cin &gt;&gt; r &gt;&gt; c;  //输入行和列 
+	for(int i = 1 ; i &lt;= r ; i++)
+		for(int j = 1 ; j &lt;= c ; j++)
+			cin &gt;&gt; f [i] [j];  //输入地图 
+	total = f [1] [1];  //初始化 
+	fju [1] [1] = 1;
+	dfs ( 1 , 1 ); 
+	cout &lt;&lt; total ; 
+	return 0;
+}
+</code></pre>
+<pre><code></code></pre>
+]]></content>
+    </entry>
 </feed>

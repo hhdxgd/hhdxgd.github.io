@@ -2085,11 +2085,11 @@ body {
     .node-title::before {
       background-color: #d8f5a2;
     }a {
-      color: #555;
+      color: #74c0fc;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #555;
+      color: #74c0fc;
     }a:hover {
       color: #222;
     }
@@ -2175,15 +2175,15 @@ body {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: default;
+      cursor: url('/media/curs/正常选择.cur'), default;
     }a {
-      cursor: pointer;
+      cursor: url('/media/curs/链接选择.cur'), pointer !important;
     }input, textarea, code {
-      cursor: text;
+      cursor: url('/media/curs/文本选择.cur'), text !important;
     }code > span.copy-code {
-      cursor: pointer;
+      cursor: url('/media/curs/忙.cur'), text !important;
     }.post img {
-      cursor: zoom-in;
+      cursor: url('/media/curs/垂直调整大小.cur'), zoom-in !important;
     }.post img {
-      cursor: zoom-out;
+      cursor: url('/media/curs/水平调整大小.cur'), zoom-out !important;
     }
