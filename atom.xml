@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hhdxgd.github.io</id>
     <title>hhdxgd&apos;s blog</title>
-    <updated>2021-12-25T15:20:40.808Z</updated>
+    <updated>2022-01-28T00:41:14.192Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hhdxgd.github.io"/>
     <link rel="self" href="https://hhdxgd.github.io/atom.xml"/>
     <subtitle>咕咕咕</subtitle>
     <logo>https://hhdxgd.github.io/images/avatar.png</logo>
     <icon>https://hhdxgd.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, hhdxgd&apos;s blog</rights>
+    <rights>All rights reserved 2022, hhdxgd&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[P2958木瓜林_题解]]></title>
         <id>https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/</id>
