@@ -9,7 +9,7 @@
 <meta name="description" content="咕咕咕">
 <meta name="theme-color" content="#000">
 <title>hhdxgd&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1643330383788">
+<link rel="shortcut icon" href="/favicon.ico?v=1650981117760">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -105,7 +105,7 @@
               <li class="nav-item ">
                 <a href="/friends/" target="_blank">
                   
-                    <i class="fa fa-address-book"></i> 关于
+                    <i class="fa fa-address-book"></i> friends
                   
                 </a>
               </li>
@@ -160,18 +160,7 @@
     
     <div class="site-description right-motion">
       
-      
-      
-        <p>蒟蒻 </p>
-      
-        <p> OIer </p>
-      
-        <p> MOer </p>
-      
-        <p> CTFer </p>
-      
-        <p> 洛谷:hhdxgd</p>
-      
+        <p id="binft">蒟蒻 \n OIer \n MOer \n CTFer \n 洛谷:hhdxgd</p>
       
     </div>
     
@@ -180,7 +169,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-count">3</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -192,6 +181,13 @@
     </div>
   </div>
   
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://hhdxgd.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
     
   
   
@@ -209,10 +205,6 @@
     </div>
   
 
-
-  <div class="sidebar-item">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=200 height=52 src="//music.163.com/outchain/player?type=2&id=29097542&auto=1&height=32"></iframe>
-  </div>
 
 
   <div style="width: 100%; position: relative;">
@@ -247,6 +239,12 @@
           <small class="language" data-lan="tag">标签</small>
         </h2>
       </div>
+      
+      
+      
+      
+      
+      
       
       
       
@@ -353,7 +351,7 @@
         <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
         <input id="duType" value="douqilai" type="hidden">
         
-        <input name="live2dBGM" value="https://sharefs.ali.kugou.com/202112241926/853909b22097cd49464ac37b015206fa/G197/M08/15/17/BQ4DAF5PqaeAJquhAE-SyMmxog4854.mp3" type="hidden">
+        <input name="live2dBGM" value="https://xp.hifini.com:233/music/一棵小葱 - 青花瓷(戏曲版).m4a" type="hidden">
         
       </div>
     
@@ -805,7 +803,7 @@
 		}
 		$(document).ready(function () {
 			var AIimgSrc = [];
-			let chooseLive2d = 'tororo'
+			let chooseLive2d = 'histoire'
 			if (chooseLive2d === 'histoire') {
 				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
 				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
@@ -865,6 +863,45 @@
                       
                         
                           
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div class="aplayer" id="aplayer"></div>
+  <script>
+  let musics = JSON.parse('[{"author":"高橋李依","cover":"https://y.qq.com/music/photo_new/T002R300x300M000001GCe4t47dO7p_1.jpg","lrc":"","musicLink":"http://1.117.41.150/1.mp3","musicName":"ありがとう-《擅长捉弄的高木同学》TV动画插曲"}]');
+  let mediaMusic = [];
+  for (let i = 0; i < musics.length; i++) {
+    let item = musics[i];
+    mediaMusic.push({
+      name: item.musicName,
+      artist: item.author,
+      url: item.musicLink,
+      lrc: item.lrc,
+      cover: item.cover
+    });
+  }
+
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      lrcType: 3,
+      listFolded: false,
+      listMaxHeight: 90,
+      audio: mediaMusic
+  });
+  window.addEventListener('load', function() {
+    let postBody = document.querySelector('#post_body');
+    let hs = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    postBody && hs.forEach(h => {
+      let helems = postBody.querySelectorAll(h);
+      if (helems.length > 0) {
+        helems.forEach(elem => {
+          elem.id = encodeURI(elem.id);
+        })
+      }
+    })
+  })
+  </script>
+
 
                             
 </div>
@@ -1081,6 +1118,136 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://hhdxgd.github.io/post/xgd-live-wang-ke-zhi-bo/"" data-c="
+          &lt;p&gt;音乐食用更佳：&lt;/p&gt;
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=1475596788&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;在匆匆过去的一个多月的网课时间里，hhdxgd的学习成绩大幅度下滑(期中考试挂大分了)。&lt;/p&gt;
+&lt;p&gt;于是，思索了很久，发现一定是上课摸鱼使得学习不在状态的！&lt;/p&gt;
+&lt;p&gt;怎么样才能更好的  学习 &lt;strong&gt;&lt;s&gt;内卷&lt;/s&gt;&lt;/strong&gt; ，在查找语文作文资料的时候找到了一篇&lt;a href=&#34;https://blog.hhdxgd.com/post/dong-de-fang-di-zi-ji-cai-neng-ba-gao-ren-sheng/&#34;&gt;很好的文章（转载）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;引用其中几句&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开启自律时，给自己定一个低强度目标，更容易让自律无压力地走进我们的生活。只要确定是对的事，勇于开始、天天做，总会出现化腐朽为神奇的力量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自律和不自律，都会吃苦。不同的是，自律的苦会让人生越来越甜。而真正的自律，从不靠硬撑。用对方法，便能让自律成为一种生活习惯。&lt;/p&gt;
+&lt;p&gt;就像早起早睡的人能感受到身体日益康健，常常阅读的人能感受到心灵逐渐丰盈。当自律成为一种本能，它便成为了我们的一个习惯、一个爱好。这一阶段的自律，才是真正属于你的自律。我们共勉。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看完之后，大为震撼，瞬间一点也都不想摸鱼了。&lt;/p&gt;
+&lt;p&gt;所以为了遏制自己上课摸鱼，花费了&lt;s&gt;极多的&lt;/s&gt;时间制作了一个网课直播网站 (1秒1帧，高清省流，稳定不易掉线) 。&lt;/p&gt;
+&lt;p&gt;但是，文中又写到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个人都有自己的自律区间，过度高强度的自律只会适得其反，不如为自己设定一个弹性的自律计划，让自律能轻松地持续下去。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;于是悟了，原来不能一棒子打死，是要有节制的摸鱼啊&lt;/p&gt;
+&lt;p&gt;于是课余部分时间就不会直播啦，awa&lt;/p&gt;
+&lt;p&gt;希望大家能够监督hhdxgd好好学习&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://live.hhdxgd.com&#34;&gt;点击这里进入直播（直播建议电脑观看，手机观看会错乱不堪.......）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;快速预览(这里也能看，只不过效果不太好，所以点击上方链接效果会更好)：&lt;/p&gt;
+&lt;style&gt;
+	.iframe-body-sty{position: relative;overflow: hidden;height:400px;width: 1000px;background-color: red;}
+	.iframe-body-sty&gt;#iframe-shrink{position: absolute;transform:scale(0.44);left: -650px;top: -260px;}
+&lt;/style&gt;
+&lt;div class=&#34;iframe-body-sty&#34;&gt;
+&lt;iframe id=&#34;iframe-shrink&#34; src=&#34;http://live.hhdxgd.com&#34; width=&#34;1920px&#34; height=&#34;920px&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;">XGD LIVE 网课直播</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://hhdxgd.github.io/post/wc2022-gua-fen-ji/"" data-c="
+          &lt;!-- more --&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;音乐使用更佳：&lt;/p&gt;
+&lt;iframe width=100 height=60  src=&#34;https://xp.hifini.com:233/music/一棵小葱 - 青花瓷(戏曲版).m4a&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;这次考试，是彻底废掉了 .......&lt;/p&gt;
+&lt;p&gt;考试时间是从8:30-13:30（话说，没有给吃饭的时间，选手必须要自带干粮，那.......，为什么不补二十分钟的吃饭时间......）&lt;/p&gt;
+&lt;p&gt;T1是什么奇葩（貌似是最难的一题）？我直接全输出 -1（尝试骗分，毕竟万一.......这一次又和CSP-S 2021 一样，全输 -1 能骗好多好多分呢 .......qwq），考后LHQing说这题目貌似前几个的后续遍历是一样的，只要找到两个点并维护（貌似是这样的，考完了把T1给忘了），但他没去敲......&lt;/p&gt;
+&lt;p&gt;T2是YNOI毒瘤出题人 (lXl).......出的题目，但我觉得是最简单的（因为最好暴力实现），但估计拿不了多少分（至少不会爆零了），贴上   &lt;s&gt;令我骄傲&lt;/s&gt;   自己都想喷的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+#define maxn 500005
+#define int long long
+using namespace std;
+inline int read() {
+	int x = 0;
+	char ch = getchar();
+	bool flag = 1;
+	while (ch &amp;lt; &#39;0&#39; || ch &amp;gt; &#39;9&#39;) {
+		if (ch == &#39;-&#39;) {
+			flag = 0;
+		}
+		ch = getchar();
+	}
+	while (ch &amp;gt;= &#39;0&#39; &amp;amp;&amp;amp; ch &amp;lt;= &#39;9&#39;) {
+		x += (ch - &#39;0&#39;) + x * 9;
+		ch = getchar();
+	}
+	if (flag) {
+		return x;
+	} else {
+		return -x;
+	}
+}
+int n,m;
+struct node{
+    int num;
+    int where;
+} str[maxn];
+node newstr[maxn];
+bool cmp(node a,node b){
+    return a.num&amp;lt;b.num;
+}
+int ans(int from,int to){
+    memcpy(newstr+from,str+from,sizeof(node)*(to-from+1));
+    sort(newstr+from,newstr+to+1,cmp);
+    int retans=0;
+    for(int i=from+1;i&amp;lt;=to;i++){
+        retans+=abs(newstr[i].where-newstr[i-1].where);
+    }
+    return retans;
+}
+signed main(){
+    freopen(&amp;quot;rrads.in&amp;quot;,&amp;quot;r&amp;quot;,stdin);
+    freopen(&amp;quot;rrads.out&amp;quot;,&amp;quot;w&amp;quot;,stdout);
+    n=read(),m=read();
+    for(int i=1;i&amp;lt;=n;i++){
+        str[i].num=read();
+        str[i].where=i;
+    }
+    for(int i=1;i&amp;lt;=m;i++){
+        int from=read(),to=read();
+        cout&amp;lt;&amp;lt;ans(from,to)&amp;lt;&amp;lt;endl;
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这代码能拿10分吗......&lt;/p&gt;
+&lt;p&gt;T3是最最最离谱的题目，亿年难见的出了交互题，使用随机化可以骗90+分（但我不会随机啊啊啊啊啊啊啊啊啊啊），随机种子选的好可以拿满分，这题目我直接尝试 hack 评测机，然后，就无了....&lt;/p&gt;
+&lt;p&gt;反正挂了就是挂了，彻底挂大分了&lt;/p&gt;
+">WC2022挂分祭</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://hhdxgd.github.io/post/dong-de-fang-di-zi-ji-cai-neng-ba-gao-ren-sheng/"" data-c="
+          &lt;p&gt;音乐食用更佳：&lt;/p&gt;
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=1475596788&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;转载如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;说到自律，很多人会进入一个误区，认为强度是自律的核心。决定早起，便设定凌晨四点的闹钟；决定减肥，便选择节食加高难度运动……兴冲冲立目标，却因为强度太大，内心已有畏难情绪。如此，第一步都很难跨出，更不要提长期自律了。&lt;/p&gt;
+&lt;p&gt;每个人都有着不同的能量，自律也会因此各不相同。量力自律，是敲开自律大门的正确方式。想要每天健身却总因为忙碌而耽搁，不如定一个低点的目标，睡觉前做十几个开合跳；想要每天背一百个单词，却因为量大而完不成，不如定个容易实现的目标，每天先记住二十个单词。一不小心，或许还会超额完成任务，获得更多成就感。&lt;/p&gt;
+&lt;p&gt;开启自律时，给自己定一个低强度目标，更容易让自律无压力地走进我们的生活。只要确定是对的事，勇于开始、天天做，总会出现化腐朽为神奇的力量。&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;每个人都有自己的自律区间，过度高强度的自律只会适得其反，不如为自己设定一个弹性的自律计划，让自律能轻松地持续下去。&lt;/p&gt;
+&lt;p&gt;曾在微博上看到一位博主为自己设定了30天高强度自律计划：早上6点起床，晚上11点睡觉，时间全部排满。这样看似充实，然而还没到30天，可能已经累垮。心理学中有个“破窗效应”：当一件不好的事或行为出现时，我们的第一反应是放任它继续坏下去。在自律的路上放弃，有时可能就是因为“破窗效应”。本打算坚持阅读一百天，但因中途一天没有进行阅读，便会认为自己是一个不自律的人，自此便放弃原计划；本计划要减肥，却在一次聚餐后便一而再、再而三地放任自己。如此反复，就成为了我们常说的“间歇性自律，持续性放纵”。&lt;/p&gt;
+&lt;p&gt;相反，弹性的自律会为可能出现的“例外”设下防线，不让它动摇我们的计划，让“破窗效应”无处遁形。今天状态不佳，那就只阅读三页书；偶尔吃了一些高热量食物，就当是对自己的奖励，明天继续保持计划。不要强迫自己去做一个完美的人，适度的弹性可以帮助我们释放压力，让自律不再痛苦。&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;p&gt;网上有这样一个问题：“在你印象中，哪个错误认识的记忆最深刻？”一个高赞回答说：“以为自由就是想做啥做啥，后来才发现自律者才会有自由。”&lt;/p&gt;
+&lt;p&gt;自律和不自律，都会吃苦。不同的是，自律的苦会让人生越来越甜。而真正的自律，从不靠硬撑。用对方法，便能让自律成为一种生活习惯。&lt;/p&gt;
+&lt;p&gt;就像早起早睡的人能感受到身体日益康健，常常阅读的人能感受到心灵逐渐丰盈。当自律成为一种本能，它便成为了我们的一个习惯、一个爱好。这一阶段的自律，才是真正属于你的自律。我们共勉。&lt;/p&gt;
+&lt;/blockquote&gt;
+">懂得放低自己，才能拔高人生</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/"" data-c="
@@ -1445,20 +1612,14 @@ int main() {
 <script src="/media/js/motion.js"></script>
 
 
-  <script
-    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-  <script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 200
-    });
-  </script>
-
 
 
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
 <script type="text/javascript" src="/media/js/mouse/fireworks.js"></script>
 
+
+  <script src="/media/js/cool.js"></script>
 
 
 
