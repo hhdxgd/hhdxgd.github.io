@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hhdxgd.github.io</id>
+    <title>TLE_Automaton&apos;s blog</title>
+    <updated>2022-05-08T14:42:31.202Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hhdxgd.github.io"/>
+    <link rel="self" href="https://hhdxgd.github.io/atom.xml"/>
+    <subtitle>TLE_Automaton&apos;s blog</subtitle>
+    <logo>https://hhdxgd.github.io/images/avatar.png</logo>
+    <icon>https://hhdxgd.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, TLE_Automaton&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[CF1674C Infinite Replacement 题解]]></title>
+        <id>https://hhdxgd.github.io/post/cf1674c-infinite-replacement-ti-jie/</id>
+        <link href="https://hhdxgd.github.io/post/cf1674c-infinite-replacement-ti-jie/">
+        </link>
+        <updated>2022-05-06T04:17:50.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[XGD LIVE 网课直播]]></title>
+        <id>https://hhdxgd.github.io/post/xgd-live-wang-ke-zhi-bo/</id>
+        <link href="https://hhdxgd.github.io/post/xgd-live-wang-ke-zhi-bo/">
+        </link>
+        <updated>2022-04-26T13:04:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WC2022挂分祭]]></title>
+        <id>https://hhdxgd.github.io/post/wc2022-gua-fen-ji/</id>
+        <link href="https://hhdxgd.github.io/post/wc2022-gua-fen-ji/">
+        </link>
+        <updated>2022-01-28T00:41:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[P2958木瓜林_题解]]></title>
+        <id>https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/</id>
+        <link href="https://hhdxgd.github.io/post/p2958-mu-gua-lin-_-ti-jie/">
+        </link>
+        <updated>2021-12-25T13:04:11.000Z</updated>
+    </entry>
+</feed>
